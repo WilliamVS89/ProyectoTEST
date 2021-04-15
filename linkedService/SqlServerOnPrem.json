@@ -1,0 +1,16 @@
+{
+	"name": "SqlServerOnPrem",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=SRVWINSQL19;initial catalog=Ventas;user id=sqladminuser",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0ZjBlMjU0MS0xNjgzLTQ4YmEtOWNjMS0wNmNiOWJmYmEzMTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "IntegrationRuntimeOnPrem",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

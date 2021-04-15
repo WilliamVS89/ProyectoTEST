@@ -1,0 +1,6 @@
+{
+	"name": "IntRuntimeOnPremTSM",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}

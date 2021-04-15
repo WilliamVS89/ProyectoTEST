@@ -1,0 +1,40 @@
+{
+	"name": "SqlServerVMAzure",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlServerOnPrem",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "OrdenID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SKU",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Ventaneta",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			},
+			{
+				"name": "Imp",
+				"type": "money",
+				"precision": 19,
+				"scale": 4
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Ventas"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

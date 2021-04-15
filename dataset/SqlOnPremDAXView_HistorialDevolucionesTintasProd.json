@@ -1,0 +1,118 @@
+{
+	"name": "SqlOnPremDAXView_HistorialDevolucionesTintasProd",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlOnPremDAX",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "FECHADEVOLUCION",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FK_REGISTOPRODUCCION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PK_DEVOLUCIONTINTASPROD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FK_COLORPRODUCCION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FK_DISENO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FK_ENTREGATINTAPROD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FK_MAQUINA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FK_SET",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HORADEVOLUCION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PESODEVUELTO",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PLANTA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID#2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#2",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PESO",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PORCENTAJE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "FUNCTIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTIDAARANCELARIA",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VIEW_HISTORIALDEVOLUCIONESTINTASPROD"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
