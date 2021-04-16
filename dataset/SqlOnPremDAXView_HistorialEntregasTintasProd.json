@@ -1,0 +1,135 @@
+{
+	"name": "SqlOnPremDAXView_HistorialEntregasTintasProd",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlOnPremDAX",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "SETTINTAS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CODIGOENTREGA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CODIGOCOLOR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NOMBRECOLOR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REGISTROPRODUCCION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DISENO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PESOENTREGADO",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID#2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#2",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CODIGOSILCE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAQUINA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PLANTA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CODIGOARANCELARIO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PORCENTAJE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PESO",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "FECHAENTREGA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "HORAENTREGA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NUMEROSERIE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NUMEROLOTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DIMENSION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CONSOLIDADO",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VIEW_HISTORIALENTREGASTINTASPROD"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

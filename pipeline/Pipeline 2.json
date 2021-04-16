@@ -1,0 +1,273 @@
+{
+	"name": "Pipeline 2",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SharePointOnlineListSource",
+						"httpRequestTimeout": "00:05:00"
+					},
+					"sink": {
+						"type": "SqlPoolSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": false
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"enableSkipIncompatibleRow": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ContentTypeID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ContentTypeID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Title",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Title",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ComplianceAssetId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ComplianceAssetId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CategoryValue",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CategoryValue",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PercentComplete",
+									"type": "Double"
+								},
+								"sink": {
+									"name": "PercentComplete",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "PriorityValue",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PriorityValue",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "TaskStatusValue",
+									"type": "String"
+								},
+								"sink": {
+									"name": "taskStatusValue",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AssignedToId",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "AssignedToId",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "TechnicalAnswer",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TechnicalAnswer",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AffectedUserId",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "AffecteduserID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ReleaseVersion",
+									"type": "String"
+								},
+								"sink": {
+									"name": "releaseversion",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Id",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ContentType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Contenttype",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Modified",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "modified",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Created",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "created",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "CreatedById",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "CreatedByID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ModifiedById",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ModifiedByID",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Owshiddenversion",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Owshiddenversion",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Version",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Version",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Path",
+									"type": "String"
+								},
+								"sink": {
+									"name": "path",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SharePointList_HelpDesk",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SqlPooTablehelpDesk",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-04-16T16:46:48Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

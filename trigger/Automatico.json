@@ -1,0 +1,24 @@
+{
+	"name": "Automatico",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Pipeline 6",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 3,
+				"startTime": "2021-04-16T11:35:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

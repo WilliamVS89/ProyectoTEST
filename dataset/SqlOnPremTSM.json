@@ -1,0 +1,114 @@
+{
+	"name": "SqlOnPremTSM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlOnPremTSM",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "Requerimiento",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "Cliente",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "NombreCliente",
+				"type": "varchar"
+			},
+			{
+				"name": "Servicio",
+				"type": "varchar"
+			},
+			{
+				"name": "Documento",
+				"type": "varchar"
+			},
+			{
+				"name": "NoPiezas",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Color",
+				"type": "varchar"
+			},
+			{
+				"name": "Estado",
+				"type": "varchar"
+			},
+			{
+				"name": "Fecha",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "TallaPrincipal",
+				"type": "varchar"
+			},
+			{
+				"name": "UsuarioMod",
+				"type": "varchar"
+			},
+			{
+				"name": "FechaMod",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ConstruccionTela",
+				"type": "varchar"
+			},
+			{
+				"name": "ComposicionTela",
+				"type": "varchar"
+			},
+			{
+				"name": "ConfeccionTela",
+				"type": "varchar"
+			},
+			{
+				"name": "SOAdicional",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TelaSustituta",
+				"type": "bit"
+			},
+			{
+				"name": "Programa",
+				"type": "varchar"
+			},
+			{
+				"name": "Diseno",
+				"type": "varchar"
+			},
+			{
+				"name": "NombrePrenda",
+				"type": "varchar"
+			},
+			{
+				"name": "NombreArte",
+				"type": "varchar"
+			},
+			{
+				"name": "UbicacionPrenda",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "vSublimacionSynapse"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "SharePointList_HelpDesk",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SharePointOnlineList1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SharePointOnlineListResource",
+		"schema": [],
+		"typeProperties": {
+			"listName": "HelpDesk"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

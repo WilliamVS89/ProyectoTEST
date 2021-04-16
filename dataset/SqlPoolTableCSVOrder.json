@@ -1,0 +1,56 @@
+{
+	"name": "SqlPoolTableCSVOrder",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "OrderID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CustomerID",
+				"type": "varchar"
+			},
+			{
+				"name": "EmployeeID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OrderDate",
+				"type": "varchar"
+			},
+			{
+				"name": "RequiredDate",
+				"type": "varchar"
+			},
+			{
+				"name": "ShippedDate",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipVia",
+				"type": "varchar"
+			},
+			{
+				"name": "Freight",
+				"type": "varchar"
+			},
+			{
+				"name": "ShipName",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "Orders"
+		},
+		"sqlPool": {
+			"referenceName": "SQLPoolUAT",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

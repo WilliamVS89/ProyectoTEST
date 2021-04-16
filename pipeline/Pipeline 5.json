@@ -1,0 +1,263 @@
+{
+	"name": "Pipeline 5",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlPoolSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": false
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ITEMID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ITEMID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DIMENSION",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DIMENSION",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DISPONIBLE",
+									"type": "Decimal"
+								},
+								"sink": {
+									"name": "DISPONIBLE",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "DATAAREAID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DATAAREAID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PARTITION",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "PARTITION",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "RECID",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "RECID",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "DATAAREAID#2",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DATAAREAID#2",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PARTITION#2",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "PARTITION#2",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "NOMBRE_BUSQUEDA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NOMBRE_BUSQUEDA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_ARANCELARIO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CODIGO_ARANCELARIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CODIGO_SILCE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CODIGO_SILCE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DATAAREAID#4",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DATAAREAID#4",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PARTITION#4",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "PARTITION#4",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "LOTE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LOTE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SERIE",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SERIE",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LOCALIDAD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "LOCALIDAD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ALMACEN",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ALMACEN",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SITIO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SITIO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PARTITION#3",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "PARTITION#3",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "NOMBRE_PRODUCTO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NOMBRE_PRODUCTO",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SqlOnPremDAXView_InventarioDisponibleTrazabilidad",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SqlPoolInventarioDAX",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-04-16T17:00:28Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

@@ -1,0 +1,24 @@
+{
+	"name": "CadaHora",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "CopyDataTSM",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2021-04-16T20:00:00",
+				"timeZone": "Central America Standard Time"
+			}
+		}
+	}
+}

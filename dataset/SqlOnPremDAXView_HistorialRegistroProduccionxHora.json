@@ -1,0 +1,135 @@
+{
+	"name": "SqlOnPremDAXView_HistorialRegistroProduccionxHora",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlOnPremDAX",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "PRODUCCION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INICIADO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CERRADO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PLANTA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAQUINA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FICHAPRODUCCION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DISENO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TALLA",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FECHAHORAFINCP",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PIEZASPRODUCIDAS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FECHAHORAINICIOCP",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "ENCARGADOMAQUINA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID#2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#2",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CODIGOCLIENTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NOMBRECLIENTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID#3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#3",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DESDE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "HASTA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PIEZAS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RAZON",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VIEW_HISTORIALREGISTROPRODUCCIONXHORA"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

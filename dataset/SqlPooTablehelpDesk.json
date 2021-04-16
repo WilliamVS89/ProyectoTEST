@@ -1,0 +1,109 @@
+{
+	"name": "SqlPooTablehelpDesk",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "ContentTypeID",
+				"type": "varchar"
+			},
+			{
+				"name": "Title",
+				"type": "varchar"
+			},
+			{
+				"name": "ComplianceAssetld",
+				"type": "varchar"
+			},
+			{
+				"name": "description",
+				"type": "varchar"
+			},
+			{
+				"name": "categoriavalue",
+				"type": "varchar"
+			},
+			{
+				"name": "PorcentajeCompleto",
+				"type": "decimal",
+				"precision": 3,
+				"scale": 2
+			},
+			{
+				"name": "PriorityValue",
+				"type": "varchar"
+			},
+			{
+				"name": "taskStatusValue",
+				"type": "varchar"
+			},
+			{
+				"name": "AssignedTold",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RespuestaTecnica",
+				"type": "varchar"
+			},
+			{
+				"name": "AffecteduserID",
+				"type": "varchar"
+			},
+			{
+				"name": "releaseversion",
+				"type": "varchar"
+			},
+			{
+				"name": "ID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Contenttype",
+				"type": "varchar"
+			},
+			{
+				"name": "modified",
+				"type": "varchar"
+			},
+			{
+				"name": "created",
+				"type": "varchar"
+			},
+			{
+				"name": "CreatedByID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ModifiedByID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Owshiddenversion",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Version",
+				"type": "varchar"
+			},
+			{
+				"name": "path",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SharepointListHelpDesk"
+		},
+		"sqlPool": {
+			"referenceName": "SQLPoolUAT",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

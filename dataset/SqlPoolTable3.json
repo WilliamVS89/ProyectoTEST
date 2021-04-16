@@ -1,0 +1,105 @@
+{
+	"name": "SqlPoolTable3",
+	"properties": {
+		"annotations": [],
+		"type": "SqlPoolTable",
+		"schema": [
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DIMENSION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DISPONIBLE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID#2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#2",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "NOMBRE_BUSQUEDA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CODIGO_ARANCELARIO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CODIGO_SILCE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID#4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#4",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LOTE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SERIE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LOCALIDAD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ALMACEN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SITIO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#3",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "NOMBRE_PRODUCTO",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "InventarioDAX_TEST"
+		},
+		"sqlPool": {
+			"referenceName": "SQLPoolUAT",
+			"type": "SqlPoolReference"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

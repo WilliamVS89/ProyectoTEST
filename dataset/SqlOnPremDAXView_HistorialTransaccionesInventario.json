@@ -1,0 +1,134 @@
+{
+	"name": "SqlOnPremDAXView_HistorialTransaccionesInventario",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "SqlOnPremDAX",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "DATEFINANCIAL",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DATEPHYSICAL",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "QTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "STATUSISSUE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "STATUSRECEIPT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COSTAMOUNTPOSTED",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID#2",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#2",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "REFERENCECATEGORY",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REFERENCEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID#3",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#3",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "INVENTBATCHID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSITEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSERIALID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID#4",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARTITION#4",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ITEMGROUPID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "VIEW_HISTORIALTRANSACCIONESINVENTARIO"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

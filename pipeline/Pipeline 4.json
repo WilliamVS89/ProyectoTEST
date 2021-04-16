@@ -1,0 +1,283 @@
+{
+	"name": "Pipeline 4",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
+					},
+					"sink": {
+						"type": "SqlPoolSink",
+						"allowPolyBase": true,
+						"polyBaseSettings": {
+							"rejectValue": 0,
+							"rejectType": "value",
+							"useTypeDefault": false
+						}
+					},
+					"enableStaging": true,
+					"stagingSettings": {
+						"linkedServiceName": {
+							"referenceName": "AzureDataLakeStorage",
+							"type": "LinkedServiceReference"
+						}
+					},
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Requerimiento",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "Requerimiento",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "Cliente",
+									"type": "Int64"
+								},
+								"sink": {
+									"name": "Cliente",
+									"type": "Int64"
+								}
+							},
+							{
+								"source": {
+									"name": "NombreCliente",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NombreCliente",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Servicio",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Servicio",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Documento",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Documento",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NoPiezas",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "NoPiezas",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Color",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Color",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Estado",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Estado",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fecha",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "Fecha",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "TallaPrincipal",
+									"type": "String"
+								},
+								"sink": {
+									"name": "TallaPrincipal",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UsuarioMod",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UsuarioMod",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FechaMod",
+									"type": "DateTime"
+								},
+								"sink": {
+									"name": "FechaMod",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "ConstruccionTela",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ConstruccionTela",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ComposicionTela",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ComposicionTela",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ConfeccionTela",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ConfeccionTela",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "SOAdicional",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "SOAdicional",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "TelaSustituta",
+									"type": "Boolean"
+								},
+								"sink": {
+									"name": "TelaSustituta",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "Programa",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Programa",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Diseno",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Diseno",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NombrePrenda",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NombrePrenda",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NombreArte",
+									"type": "String"
+								},
+								"sink": {
+									"name": "NombreArte",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UbicacionPrenda",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UbicacionPrenda",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SqlOnPremTSM",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "SqlPoolSublimacionSynapse",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2021-04-16T16:36:42Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}
